@@ -1,0 +1,83 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+This file is the Main.\+cpp which is the central code which controls the major flow of the Satellite\textquotesingle{}s functions.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Utils.\+h$>$}\newline
+{\ttfamily \#include $<$Mode0.\+h$>$}\newline
+{\ttfamily \#include $<$Mode1.\+h$>$}\newline
+{\ttfamily \#include $<$Mode2.\+h$>$}\newline
+{\ttfamily \#include $<$Mode3.\+h$>$}\newline
+{\ttfamily \#include $<$Mode4.\+h$>$}\newline
+{\ttfamily \#include $<$Mode5.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+G\+F\+X.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+S\+S\+D1306.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+Sensor.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+B\+M\+E280.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+L\+S\+M6\+D\+S\+O32.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Client\+Secure.\+h$>$}\newline
+{\ttfamily \#include $<$Pub\+Sub\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$Radio\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
+{\ttfamily \#include $<$E\+S\+P32\+Servo.\+h$>$}\newline
+{\ttfamily \#include $<$Melodies.\+h$>$}\newline
+{\ttfamily \#include $<$E\+E\+P\+R\+O\+M.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a32c9dcff8e74399eb4749f29b3eeb8f1}\label{main_8cpp_a32c9dcff8e74399eb4749f29b3eeb8f1}} 
+void {\bfseries Display\+Mode} (bool mode0\+Triggered, bool mode1\+Triggered, bool mode2\+Triggered, bool mode3\+Triggered, bool mode4\+Triggered, bool mode5\+Triggered)
+\item 
+\mbox{\Hypertarget{main_8cpp_a6ab5ec64813a21730e347e896d273cf5}\label{main_8cpp_a6ab5ec64813a21730e347e896d273cf5}} 
+void {\bfseries save\+Default\+Mode} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a3ea4e5dd89aee0e47e2864df200fdcd4}\label{main_8cpp_a3ea4e5dd89aee0e47e2864df200fdcd4}} 
+void {\bfseries load\+Default\+Mode} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_ac3a129f66dc859e2b7279565f4e1de78}\label{main_8cpp_ac3a129f66dc859e2b7279565f4e1de78}} 
+void {\bfseries callback} (char $\ast$topic, byte $\ast$payload, unsigned int length)
+\item 
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+void {\bfseries setup} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a30ef2a02eea63ab94f97191841f7677a}\label{main_8cpp_a30ef2a02eea63ab94f97191841f7677a}} 
+int {\bfseries default\+Mode} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_aeef198d43f0cb7007e98be4822e9d42a}\label{main_8cpp_aeef198d43f0cb7007e98be4822e9d42a}} 
+int {\bfseries E\+E\+P\+R\+O\+M\+Address} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is the Main.\+cpp which is the central code which controls the major flow of the Satellite\textquotesingle{}s functions. 
+
+\begin{DoxyAuthor}{Author}
+Vasanth K 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}

@@ -1,0 +1,157 @@
+\hypertarget{main_8cpp}{}\doxysection{/home/vysh/\+Downloads/\+S\+E2\+\_\+\+C\+A\+D\+S\+E\+\_\+21\+\_\+490111/project\+\_\+template/src/main.cpp File Reference}
+\label{main_8cpp}\index{/home/vysh/Downloads/SE2\_CADSE\_21\_490111/project\_template/src/main.cpp@{/home/vysh/Downloads/SE2\_CADSE\_21\_490111/project\_template/src/main.cpp}}
+
+
+This file is the Main.\+cpp which is the central code which controls the major flow of the Satellite\textquotesingle{}s functions.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Utils.\+h$>$}\newline
+{\ttfamily \#include $<$Mode0.\+h$>$}\newline
+{\ttfamily \#include $<$Mode1.\+h$>$}\newline
+{\ttfamily \#include $<$Mode2.\+h$>$}\newline
+{\ttfamily \#include $<$Mode3.\+h$>$}\newline
+{\ttfamily \#include $<$Mode4.\+h$>$}\newline
+{\ttfamily \#include $<$Mode5.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+G\+F\+X.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+S\+S\+D1306.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+Sensor.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+B\+M\+E280.\+h$>$}\newline
+{\ttfamily \#include $<$Adafruit\+\_\+\+L\+S\+M6\+D\+S\+O32.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Client\+Secure.\+h$>$}\newline
+{\ttfamily \#include $<$Pub\+Sub\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$Radio\+Lib.\+h$>$}\newline
+{\ttfamily \#include $<$Arduino\+Json.\+h$>$}\newline
+{\ttfamily \#include $<$E\+S\+P32\+Servo.\+h$>$}\newline
+{\ttfamily \#include $<$Melodies.\+h$>$}\newline
+{\ttfamily \#include $<$E\+E\+P\+R\+O\+M.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a32c9dcff8e74399eb4749f29b3eeb8f1}{Display\+Mode}} (bool mode0\+Triggered, bool mode1\+Triggered, bool mode2\+Triggered, bool mode3\+Triggered, bool mode4\+Triggered, bool mode5\+Triggered)
+\begin{DoxyCompactList}\small\item\em Function Responsible for calling respective mode functions on their trigger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_a6ab5ec64813a21730e347e896d273cf5}\label{main_8cpp_a6ab5ec64813a21730e347e896d273cf5}} 
+void {\bfseries save\+Default\+Mode} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_a3ea4e5dd89aee0e47e2864df200fdcd4}\label{main_8cpp_a3ea4e5dd89aee0e47e2864df200fdcd4}} 
+void {\bfseries load\+Default\+Mode} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_ac3a129f66dc859e2b7279565f4e1de78}{callback}} (char $\ast$topic, byte $\ast$payload, unsigned int length)
+\begin{DoxyCompactList}\small\item\em Callback Function for received messages on \char`\"{}broadcast\char`\"{} topic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Setup function for initializing pins and sensor, motor initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Main loop which consists of transmitting Housekeeping data and controlling Mode Switching. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a30ef2a02eea63ab94f97191841f7677a}\label{main_8cpp_a30ef2a02eea63ab94f97191841f7677a}} 
+int {\bfseries default\+Mode} = 0
+\item 
+\mbox{\Hypertarget{main_8cpp_aeef198d43f0cb7007e98be4822e9d42a}\label{main_8cpp_aeef198d43f0cb7007e98be4822e9d42a}} 
+int {\bfseries E\+E\+P\+R\+O\+M\+Address} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is the Main.\+cpp which is the central code which controls the major flow of the Satellite\textquotesingle{}s functions. 
+
+\begin{DoxyAuthor}{Author}
+Vasanth K 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/04-\/15
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ac3a129f66dc859e2b7279565f4e1de78}\label{main_8cpp_ac3a129f66dc859e2b7279565f4e1de78}} 
+\index{main.cpp@{main.cpp}!callback@{callback}}
+\index{callback@{callback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily void callback (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{byte $\ast$}]{payload,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+
+
+Callback Function for received messages on \char`\"{}broadcast\char`\"{} topic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em payload} & \\
+\hline
+{\em int} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a32c9dcff8e74399eb4749f29b3eeb8f1}\label{main_8cpp_a32c9dcff8e74399eb4749f29b3eeb8f1}} 
+\index{main.cpp@{main.cpp}!DisplayMode@{DisplayMode}}
+\index{DisplayMode@{DisplayMode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DisplayMode()}{DisplayMode()}}
+{\footnotesize\ttfamily void Display\+Mode (\begin{DoxyParamCaption}\item[{bool}]{mode0\+Triggered,  }\item[{bool}]{mode1\+Triggered,  }\item[{bool}]{mode2\+Triggered,  }\item[{bool}]{mode3\+Triggered,  }\item[{bool}]{mode4\+Triggered,  }\item[{bool}]{mode5\+Triggered }\end{DoxyParamCaption})}
+
+
+
+Function Responsible for calling respective mode functions on their trigger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode0\+Triggered} & \\
+\hline
+{\em mode1\+Triggered} & \\
+\hline
+{\em mode2\+Triggered} & \\
+\hline
+{\em mode3\+Triggered} & \\
+\hline
+{\em mode4\+Triggered} & \\
+\hline
+{\em mode5\+Triggered} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.cpp@{main.cpp}!loop@{loop}}
+\index{loop@{loop}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main loop which consists of transmitting Housekeeping data and controlling Mode Switching. 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.cpp@{main.cpp}!setup@{setup}}
+\index{setup@{setup}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup function for initializing pins and sensor, motor initialization. 
+
+\begin{DoxyReturn}{Returns}
+(void) 
+\end{DoxyReturn}
